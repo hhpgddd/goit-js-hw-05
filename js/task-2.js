@@ -1,11 +1,2 @@
-function calcAverageCalories(days) {
-    let caloriesAvg = 0;
+const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName));
 
-    for (const calorie of days) {
-        caloriesAvg += calorie["calories"];
-    }
-    if (days.length === 0) {
-        return 0;
-    }
-    return caloriesAvg / days.length;
-}
